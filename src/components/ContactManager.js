@@ -4,10 +4,15 @@ import PeopleList from './PeopleList'
 
 export default function ContactManager(props) {
   const [contacts, setContacts] = useState(props.data);
+  console.log(contacts)
+
+  function addPerson(name) {
+    setContacts([...contacts, name]);
+  }
 
   return (
     <div>
-      <AddPersonForm />
+      <AddPersonForm handleSubmit={addPerson} />
       <PeopleList data={contacts} />
     </div>
   );

@@ -2,14 +2,12 @@
 import ContactManager from './components/ContactManager';
 
 const contacts = ["James Smith", "Thomas Anderson", "Bruce Wayne"];
+//const contacts = []
+console.log(contacts)
 
 function App() {
   return (
-    <div className="App">
-
-      <ContactManager data={contacts} />
-
-    </div>
+    <ContactManager data={contacts} />
   );
 }
 
